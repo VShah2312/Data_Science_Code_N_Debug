@@ -24,7 +24,11 @@ app.layout= html.Div([
                         'layout': go.Layout(title='Scatter plot')})],
                         style= {'border': '1px black solid', 'float':'left', 'width':'49.5%', 'height':'350px'}),
 
-        html.Div(style= {'border': '1px black solid', 'float':'left', 'width':'49.5%', 'height':'350px'}),
+        html.Div(children= [
+            dcc.Graph(id='box-plot', 
+                        figure= {'data':[go.Box(x= gap['gdpPercap'])],
+                        'layout': go.Layout(title='Box plot')})],
+                        style= {'border': '1px black solid', 'float':'left', 'width':'49.5%', 'height':'350px'}),
         
 ])
 
